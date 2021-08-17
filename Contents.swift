@@ -171,3 +171,41 @@ for i in 0..<4 {
     print(tot)
 }
 print(tot)
+
+var m = 2;
+repeat {
+    m *= 2
+    print(m)
+} while m < 100
+print(m)
+
+// Functions and closures
+
+func greet(person: String, day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+
+var laura = greet(person:"Laura", day:"Tuesday")
+print(laura)
+
+
+func betterReportCard(grades: [Int]) -> (min: Int, max: Int, average: Int) {
+    var min = grades[0]
+    var max = grades[0]
+    var average = 0
+    var sum = 0
+    
+    for grade in grades {
+        if grade > max {
+            max = grade
+        } else if grade < min {
+            min = grade
+        }
+        sum += grade
+    }
+    average = sum / grades.count
+    return (min, max, average)
+}
+
+let newReportCard = betterReportCard(grades: grades)
+print(newReportCard)
