@@ -209,3 +209,18 @@ func betterReportCard(grades: [Int]) -> (min: Int, max: Int, average: Int) {
 
 let newReportCard = betterReportCard(grades: grades)
 print(newReportCard)
+print(grades.sorted(by: <))
+print(grades.sorted(by: >))
+
+// _ next to param means you don't need to declare it in the function call
+func printName(_ name:String, _ lastName: String) {
+    print("\(name) \(lastName)")
+}
+
+printName("Laura", "Veee")
+
+func printNames(name: String, lastName: String) {
+    print("\(name) \(lastName)")
+}
+
+printNames(name: "Freddie", lastName: "Veee")
